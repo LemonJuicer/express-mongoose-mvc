@@ -3,14 +3,14 @@ const mongoose = require('mongoose'),
 
 mongoose.connect('mongodb://localhost/mydb', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
 });
 
 const employeeSchema = new Schema({
     name: String,
     address: String,
     phone: String,
-    email: String
+    email: String,
 });
- 
+
 module.exports = mongoose.model('Employee', employeeSchema);
